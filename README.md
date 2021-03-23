@@ -81,9 +81,19 @@ def get_engine(db, user, host, port, passwd):
 
 ### Summary:
 
-        Pandas dataframes in python scripts could be used together with serialisation & deserialisation
-    process such as pickling and unpickling. What serialisation offers is that you can store your chunks
-    (dataframes) as serialised to transmit or reconstruct for later processing.
+        Processing/querying big data always require a good strategy. We have to be careful what we are querying, or
+    how big file we want to process. We must NOT load a big CSV file into memory at once to process, there are efficient, 
+    safe ways to do it. For example, processing 5000 rows each time when you need to query/process 1 Million rows from
+    a dB is a good approach. Sometimes we can even measure how long each chunk process takes and we can put delay with 
+    rational to delay amount.
+        
+        You can read data from many file objects and pandas has very strong capabilities to automatically detect fields even 
+    NaN or None fields from file objects/db tables. Another good feature is when you need to do some calculations then you can 
+    use complex calculations by using each db/file objects fields just like in numpy.
+
+        There is another feature that I haven't used here, Pandas dataframes in python scripts could be used together with 
+    serialisation & deserialisation process such as pickling and unpickling. What serialisation offers is that you can store 
+    your chunks (dataframes) as serialised to transmit or reconstruct for later processing.
 
 
 
