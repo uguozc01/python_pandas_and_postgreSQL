@@ -1,0 +1,6 @@
+# DB Credentials
+PGHOST: localhost
+PGPORT: 5432
+PGDATABASE: academy_user
+PGUSER: academy_user
+PGPASSWORD: academy_user
