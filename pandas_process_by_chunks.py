@@ -13,7 +13,7 @@ def process_csv_by_chunks(chnk):
         print(f'Error occured while connecting to PostgreSQL, {error}')
     
     else:
-        df_tips = pd.read_csv('/home/uguozc01/myPython/PostgreSQL/tips.csv', header=0, chunksize=chnk)
+        df_tips = pd.read_csv('/myPython/PostgreSQL/tips.csv', header=0, chunksize=chnk)
         for idx, chunk in enumerate(df_tips, start=1): # used enum in case different process depending on rows is needed
             tic = time.perf_counter()
             chunk.to_sql('tips', cxn, index=False, if_exists='append')
