@@ -40,14 +40,14 @@
 
         Please check setup_environment.py code. In this code simply the following three functions are used.
 
-        ```python
-        def get_database():
-            ''' call get_connection function in try-except blcok'''
-        def get_connection_from_profile(config_file_name):
-            ''' Sets up database connection from config file'''
-        def get_engine(db, user, host, port, passwd):
-            return engine
-        ```
+```python
+def get_database():
+    ''' call get_connection function in try-except blcok'''
+def get_connection_from_profile(config_file_name):
+    ''' Sets up database connection from config file'''
+def get_engine(db, user, host, port, passwd):
+    return engine
+```
 
         It returns an engine object to crease the connection in next step like:
         engine = setup_environment.get_database()
