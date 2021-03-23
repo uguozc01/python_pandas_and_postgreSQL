@@ -42,7 +42,7 @@
 
 ```python
 def get_database():
-    ''' call get_connection function in try-except blcok'''
+    ''' call get_connection function in try-except block'''
 def get_connection_from_profile(config_file_name):
     ''' Sets up database connection from config file'''
 def get_engine(db, user, host, port, passwd):
@@ -62,7 +62,7 @@ def get_engine(db, user, host, port, passwd):
 
 **df_tips = pd.read_csv**
 
-        Iterate through every chunk in foor loop until all CSV file is completely processed 
+        Iterate through every chunk in for loop until all CSV file is completely processed 
         by using pandas "to_sql" method.
 
         There are more methods like to_excel, to_csv and more.
